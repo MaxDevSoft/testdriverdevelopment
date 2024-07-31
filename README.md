@@ -1,5 +1,5 @@
 
-# Percentage calculation
+# Percentage calculation Test
 
 This project's main objective is to demonstrate the importance of unit testing services with JUnit 5. \
 The project is a percentage calculation backend, it was built in the Java language with Spring Boot, it serves to facilitate calculations in a practical and easy way.
@@ -14,56 +14,56 @@ The project is a percentage calculation backend, it was built in the Java langua
 
 #### Methods
 
-* findPercentage __________________________________________________________________________
+* findPercentage _______________________________ \
 `public double findPercentage(double p, double x)`
 
 Returns the value of the calculation of the percentage p over the value of x. \
 p - percentage number \
 x - any number
 
-* numberPencent ___________________________________________________________________________
+* numberPencent __________________________________ \ 
 `public double numberPencent(double x, double y)`
 
 Returns the percentage, where given the x value, knows what percentage of the y value. \
 x - any number \
 y - any number
 
-* findPercentageUp ________________________________________________________________________
+* findPercentageUp ________________________________ \ 
 `public double findPercentageUp (double x, double y)`
 
 Return how many percent increased, where given a value of x, that value increased to the value of y. \
 x - any number \
 y - any number
 
-* findPercentageDown ______________________________________________________________________
+* findPercentageDown _________________________________ \ 
 `public double findPercentageDown (double x, double y)`
 
 Return how many percent decreased, where given a value of x, that value decreased to the value of y. \
 x - any number \
 y - any number
 
-* findNumberUp __________________________________________________________________________
+* findNumberUp _________________________________ \ 
 `public double findNumberUp (double x, double p)`
 
 Return the value that increased by y percent in relation to the x value. \
 x - any number \
 p - percentage number 
 
-* findNumberDown __________________________________________________________________________
+* findNumberDown ________________________________ \ 
 `public double findNumberDown (double x, double p)`
 
 Return the value that decreased by y percent in relation to the x value. \
 x - any number \
 p - percentage number
 
-* findNumberInitialUp _________________________________________________________________________
+* findNumberInitialUp ________________________________ \ 
 `public double findNumberInitialUp (double x, double p)`
 
 Return the value where we have a number that has increased by a few percent from the initial value. \
 x - any number \
 p - percentage number
 
-* findNumberInitialDown _______________________________________________________________________
+* findNumberInitialDown _________________________________ \ 
 `public double findNumberInitialDown (double x, double p)`
 
 Return the value where we have a number that has decreased by a few percent from the initial value. \
