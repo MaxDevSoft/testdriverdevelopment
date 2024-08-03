@@ -15,18 +15,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-public class TDDController {
+public class TDDPercentController {
 
     @Autowired
     private TDDService service;
-    
-
 
     @RequestMapping("/")
     public String calcString (){
 
         return "index";
-
     }
 
     @PostMapping("/findPercentage")
@@ -37,49 +34,53 @@ public class TDDController {
   
     }
 
-    // @GetMapping("/numberPencent")
-    // public double getNumberPencent() {
-
-    //     return service.numberPencent(model.getValueX(), model.getValueY());
+    @PostMapping("/numberPencent")
+    public ResponseEntity<Double> getNumberPencent(@RequestBody TDDPercentModel model) {
+       
+        double result = service.numberPencent(model.getValueX(), model.getValueY());
+        return ResponseEntity.ok(result);
   
-    // }
+    }
+
+    @PostMapping("/findPercentageUp")
+    public ResponseEntity<Double> getFindPercentageUp(@RequestBody TDDPercentModel model){
+
+        double result = service.findPercentageUp(model.getValueX(), model.getValueY());
+        return ResponseEntity.ok(result);
+    }
+
+    @PostMapping("/findPercentageDown")
+    public ResponseEntity<Double> getFindPercentageDown(@RequestBody TDDPercentModel model){
+
+        double result = service.findPercentageDown(model.getValueX(), model.getValueY());
+        return ResponseEntity.ok(result);
+    }
     
-    // @GetMapping("/findPercentageUp")
-    // public double getFindPercentageUp() {
+    @PostMapping("/findNumberUp")
+    public ResponseEntity<Double> getFindNumberUp(@RequestBody TDDPercentModel model){
 
-    //     return service.findPercentageUp(model.getValueX(), model.getValueY());
-  
-    // }
-    // @GetMapping("/findPercentageDown")
-    // public double getFindPercentageDown() {
-
-    //     return service.findPercentageDown(model.getValueX(), model.getValueY());
-  
-    // }
-    // @GetMapping("/findNumberUp")
-    // public double getFindNumberUp() {
-
-    //     return service.findNumberUp(model.getValueX(), model.getValueP());
-  
-    // }
-    // @GetMapping("/findNumberDown")
-    // public double getFindNumberDown() {
-
-    //     return service.findNumberDown(model.getValueX(), model.getValueP());
-  
-    // }
-    // @GetMapping("/findNumberInitialUp")
-    // public double getFindNumberInitialUp() {
-
-    //     return service.findNumberInitialUp(model.getValueX(), model.getValueP());
-  
-    // }
-    // @GetMapping("/findNumberInitialDown")
-    // public double getFindNumberInitialDown() {
-
-    //     return service.findNumberInitialDown(model.getValueX(), model.getValueP());
-  
-    // }
+        double result = service.findNumberUp(model.getValueX(), model.getValueP());
+        return ResponseEntity.ok(result);
+    }
     
-    
+    @PostMapping("/findNumberDown")
+    public ResponseEntity<Double> getFindNumberDown(@RequestBody TDDPercentModel model){
+
+        double result = service.findNumberDown(model.getValueX(), model.getValueP());
+        return ResponseEntity.ok(result);
+    }
+
+    @PostMapping("/findNumberInitialUp")
+    public ResponseEntity<Double> getFindNumberInitialUp(@RequestBody TDDPercentModel model){
+
+        double result = service.findNumberInitialUp(model.getValueX(), model.getValueP());
+        return ResponseEntity.ok(result);
+    }
+
+    @PostMapping("/findNumberInitialDown")
+    public ResponseEntity<Double> getFindNumberInitialDown(@RequestBody TDDPercentModel model){
+
+        double result = service.findNumberInitialDown(model.getValueX(), model.getValueP());
+        return ResponseEntity.ok(result);
+    }
 }
