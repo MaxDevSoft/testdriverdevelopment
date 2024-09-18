@@ -3,7 +3,6 @@ package com.maxdevsoft.tdd.controllers;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 
 import com.maxdevsoft.tdd.model.TDDPercentModel;
@@ -11,16 +10,17 @@ import com.maxdevsoft.tdd.service.TDDService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@RestController
+@Controller
 public class TDDPercentController {
 
     @Autowired
     private TDDService service;
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/")
     public String calcString (){
 
         return "index";
