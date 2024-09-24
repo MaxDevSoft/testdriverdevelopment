@@ -26,11 +26,19 @@ public class TDDPercentController {
         return "index";
     }
 
+    // @PostMapping("/findPercentage")
+    // public ResponseEntity<Double> getFindPercentage(@RequestBody TDDPercentModel model) {
+       
+    //     double result = service.findPercentage(model.getValueP(), model.getValueX());
+    //     return ResponseEntity.ok(result);
+  
+    // }
+
     @PostMapping("/findPercentage")
-    public ResponseEntity<Double> getFindPercentage(@RequestBody TDDPercentModel model) {
+    public Double getFindPercentage(@RequestBody TDDPercentModel model) {
        
         double result = service.findPercentage(model.getValueP(), model.getValueX());
-        return ResponseEntity.ok(result);
+        return result;
   
     }
 
