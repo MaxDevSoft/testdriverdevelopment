@@ -2,17 +2,17 @@ package com.maxdevsoft.tdd.controllers;
 
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
-
-
-import com.maxdevsoft.tdd.model.TDDPercentModel;
-import com.maxdevsoft.tdd.service.TDDService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.maxdevsoft.tdd.model.TDDPercentModel;
+import com.maxdevsoft.tdd.service.TDDService;
 
 @Controller
 public class TDDPercentController {
@@ -34,11 +34,13 @@ public class TDDPercentController {
   
     // }
 
-    @PostMapping("/findPercentage")
-    public Double getFindPercentage(@RequestBody TDDPercentModel model) {
+    @GetMapping("/findPercentage")
+    public String getFindPercentage(Model model) {
        
-        double result = service.findPercentage(model.getValueP(), model.getValueX());
-        return result;
+        double result = service.findPercentage(52, 75);
+        model.addAttribute("result", result);
+        
+        return "index";
   
     }
 

@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p>Test Drive Development</p>
+    <div>
+        <form th:action="@{/findPercentage}" method="get">
+            <!-- <input type="text" name="Porcentage" id=""> -->
+            <!-- <input type="text" name="Number" id=""> -->
+            
+            <p th:text="${result}"></p>
+            <button type="submit">calcular</button>
+        </form>
+        
+
+    </div>
+
 </body>
+
 </html>
