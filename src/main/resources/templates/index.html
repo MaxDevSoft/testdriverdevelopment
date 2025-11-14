@@ -9,9 +9,9 @@
 
 <body>
     <div>
-        <form th:action="@{/findPercentage}" method="get">
-            <!-- <input type="text" name="Porcentage" id=""> -->
-            <!-- <input type="text" name="Number" id=""> -->
+        <form th:action="@{/numberPencent}" method="get">
+            <input type="text" name="Porcentage" id="">
+            <input type="text" name="Number" id="">
             
             <p th:text="${result}"></p>
             <button type="submit">calcular</button>

@@ -35,9 +35,9 @@ public class TDDPercentController {
     // }
 
     @GetMapping("/findPercentage")
-    public String getFindPercentage(Model model) {
+    public String getFindPercentage(@RequestBody TDDPercentModel model) {
        
-        double result = service.findPercentage(52, 75);
+        double result = service.findPercentage(model.getValueP(), model.getValueX());
         model.addAttribute("result", result);
         
         return "index";

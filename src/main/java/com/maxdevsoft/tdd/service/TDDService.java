@@ -2,12 +2,10 @@ package com.maxdevsoft.tdd.service;
 
 import org.springframework.context.annotation.Configuration;
 
-import com.maxdevsoft.tdd.model.TDDPercentModel;
-
 @Configuration
 public class TDDService {
 
-	TDDPercentModel model = new TDDPercentModel();
+	//TDDPercentModel model = new TDDPercentModel();
 
     private static double result1;
     private static double result2;
@@ -91,6 +89,15 @@ public class TDDService {
 	    result1 = 100 - p;
 	    result2 = result1 / 100;
 	    result3 = x / result2;
+	    
+	    return result3;
+	}
+
+	public static double findPercentOfThePercent (double x, double y){
+	    
+	    result1 = x * y;
+	    result2 = result1 / 10000;
+	    result3 = result2 * 100;
 	    
 	    return result3;
 	}
