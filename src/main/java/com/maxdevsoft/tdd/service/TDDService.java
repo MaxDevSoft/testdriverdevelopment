@@ -11,16 +11,17 @@ public class TDDService {
     private static double result2;
     private static double result3;
 
-	public double findPercentage (double p, double x){
+	// A porcentagem p de x é:
+	public double findPercentage (double p1, double x){
     
-	    result1 = p * x;
+	    result1 = p1 * x;
 	    result2 = (result1 / 100);
 	     
 	    return result2;
 	    
 	}
 	
-	// I have a value and I want to know the percentage on top of the greater value
+	// O valor x é o percentual de y:
 	public double numberPencent (double x, double y){
 	    
 	   result1 = x * 100;
@@ -30,7 +31,7 @@ public class TDDService {
 	    
     }
 	
-	//  I have a value and I want to know how many percent it has increased
+	//  Um valor x que AUMENTOU para y, aumentou uma porcentagem de:
 	public double findPercentageUp (double x, double y){
 	    
 	    result1 = y - x;
@@ -41,7 +42,7 @@ public class TDDService {
 	    
 	}
 	
-	//  I have a value and I want to know how many percent it has decreased
+	//  Um valor x que DIMINUIU para y, diminuiu a porcentagem de:
 	public double findPercentageDown (double x, double y){
 	    
 	    result1 = x - y;
@@ -52,20 +53,20 @@ public class TDDService {
 	    
 	}
 	
-		// I have a number and I want to increase it by some percent
-	public double findNumberUp (double x, double p){
+		// Tenho o valor x e quero AUMENTAR em p porcento, aumentou para:
+	public double findNumberUp (double x, double p1){
 	    
-	    result1 = p / 100;
+	    result1 = p1 / 100;
 	    result2 = result1 + 1;
 	    result3 = result2 * x;
 	    
 	    return result3;
 	}
 	
-	// I have a number and I want to decrease it by some percent
-	public double findNumberDown (double x, double p){
+	// Tenho o valor x e quero DIMINUIR em p porcento, diminuiu para:
+	public double findNumberDown (double x, double p1){
 	    
-	    result1 = p / 100;
+	    result1 = p1 / 100;
 	    result2 = result1 * x;
 	    result3 = x - result2;
 	    
@@ -73,29 +74,30 @@ public class TDDService {
 	    
 	}
 	
-	// I have a number that increased a few percent from the initial value was, the value was:
-	public double findNumberInitialUp (double x, double p){
+	// Tenho um valor x que AUMENTOU para p porcento, o valor INICIAL era:
+	public double findNumberInitialUp (double x, double p1){
 	    
-	    result1 = 100 + p;
+	    result1 = 100 + p1;
 	    result2 = result1 / 100;
 	    result3 = x / result2;
 	    
 		return Math.floor(result3);
 	}
 	
-	// I have a number that decreased some percentage from the initial value, the value was
-	public double findNumberInitialDown (double x, double p){
+	// Tenho um valor x que DIMINUIU para p porcento, o valor INICIAL era:
+	public double findNumberInitialDown (double x, double p1){
 	    
-	    result1 = 100 - p;
+	    result1 = 100 - p1;
 	    result2 = result1 / 100;
 	    result3 = x / result2;
 	    
 	    return result3;
 	}
 
-	public static double findPercentOfThePercent (double x, double y){
+	// O valor de p1 porcento de p2 porcento é:
+	public double findPercentOfThePercent (double p1, double p2){
 	    
-	    result1 = x * y;
+	    result1 = p1 * p2;
 	    result2 = result1 / 10000;
 	    result3 = result2 * 100;
 	    

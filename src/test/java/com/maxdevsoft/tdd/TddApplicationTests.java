@@ -1,8 +1,6 @@
 package com.maxdevsoft.tdd;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-//import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -101,6 +99,18 @@ class TddApplicationTests {
 
 		double retornoFeito = tddService.findNumberInitialDown(15,75);
 		assertEquals(resultadoEsperado, retornoFeito,0);
+	}
+
+	@Test
+	@Tag("calculus/;9")
+	@DisplayName("")
+	void getFindPercentOfThePercent(){
+
+		double resultadoEsperado = 7.5;
+
+		double retornoFeito = tddService.findPercentOfThePercent(15, 50);
+		assertEquals(resultadoEsperado, retornoFeito);
+
 	}
 
 }
